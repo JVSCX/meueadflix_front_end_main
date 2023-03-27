@@ -1,4 +1,10 @@
 import styles from "./styles.module.scss";
+import { CourseType } from "../../../services/courseService";
+import Link from "next/link";
+
+interface props {
+  course: CourseType;
+}
 
 const SlideCard = function ({ course }: props) {
   return (
