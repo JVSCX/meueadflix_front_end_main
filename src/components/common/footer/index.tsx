@@ -11,11 +11,11 @@ const Footer = function () {
           className={styles.footerLogo}
         />
         <a
-          href="https://meueadflix.com"
+          href="https://meueadflixdojv.com"
           target={"blank"}
           className={styles.footerLink}
         >
-          MEUEADFLIX.COM
+          MEUEADFLIX.JVSC.COM
         </a>
       </Container>
     </>
