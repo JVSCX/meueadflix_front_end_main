@@ -15,6 +15,12 @@ const Login = function () {
   const [toastMessage, setToastMessage] = useState("");
 
   useEffect(() => {
+    if (sessionStorage.getItem("meueadflix-token")) {
+      router.push("/home");
+    }
+  }, []);
+
+  useEffect(() => {
     const registerSucess = router.query.registred;
 
     if (registerSucess === "true") {
