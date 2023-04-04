@@ -27,6 +27,25 @@ const courseService = {
 
     return res;
   },
+  getFeaturedCourses: async () => {
+    const token = sessionStorage.getItem("meueadflix-token");
+
+    const res = await api
+      .get("/courses/featured", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .catch((error) => {
+        console.log(error.response.data.message);
+
+        return error.response;
+      });
+
+    return res;
+  },
 };
 
 export default courseService;
+
+const teste2 = "";
