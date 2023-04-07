@@ -28,7 +28,7 @@ const HeaderAuth = function () {
     setModalOpen(false);
   };
   const handleLogout = () => {
-    sessionStorage.clear;
+    sessionStorage.clear();
 
     router.push("/");
   };
