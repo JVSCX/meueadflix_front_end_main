@@ -62,11 +62,10 @@ const courseService = {
     const token = sessionStorage.getItem("meueadflix-token");
 
     const res = await api
-      .delete("/favorites", {
+      .delete(`/favorites/${courseId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-        data: { courseId },
       })
       .catch((error) => {
         return error.response;
