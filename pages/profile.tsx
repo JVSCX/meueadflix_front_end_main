@@ -10,21 +10,6 @@ import UserForm from "../src/components/profile/user";
 import styles from "../styles/profile.module.scss";
 
 const UserInfo = function () {
-  const router = useRouter();
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (!sessionStorage.getItem("meueadflix-token")) {
-      router.push("/login");
-    } else {
-      setLoading(false);
-    }
-  }, []);
-
-  if (loading) {
-    return <PageSpinner />;
-  }
-
   const [form, setForm] = useState("userForm");
 
   return (
